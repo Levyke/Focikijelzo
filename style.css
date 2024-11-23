@@ -1,0 +1,26 @@
+.adatok, .indit
+{
+    font-weight: bold;
+}
+.adatok
+{
+    text-align: center;
+}
+option:hover
+{
+    background-color: rgb(193, 193, 193);
+}
+input:hover
+{
+    background-color: rgb(193, 193, 193);
+}
+.indit
+{
+    padding: 1%;
+    border-radius: 5%;
+    border: solid 2px black;
+}
+.indit:hover
+{
+    background-color: rgb(193, 193, 193);
+}
