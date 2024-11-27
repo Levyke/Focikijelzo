@@ -45,3 +45,16 @@ input:hover
 {
     background-color: rgb(193, 193, 193);
 }
+
+.balg
+{
+    margin-right: 15%;
+}
+.jobbg
+{
+    margin-left: 15%;
+}
+.golsz
+{
+    margin-left: 2%;
+}
