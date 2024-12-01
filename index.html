@@ -10,9 +10,57 @@
     <div class="container">
         <div class="adatok">
             <label for="csapat1">Add meg az első csapat nevét:</label><br>
-            <input type="text" id="csapat1"><br><br>
+            <select id="masodikcsapat">
+                <option value="0" selected disabled>--Válassz--</option>
+                <option value="0" disabled>9. osztály</option>
+                <option value="">9. A</option>
+                <option value="">9. HBS</option>
+                <option value="">9. G</option>
+                <option value="">9. MJ</option>
+                <option value="">9. CD</option>
+                <option value="0" disabled>10. osztály</option>
+                <option value="">10. A</option>
+                <option value="">10. HBS</option>
+                <option value="">10. DM</option>
+                <option value="0" disabled>11. osztály</option>
+                <option value="">11. A</option>
+                <option value="">11. HBS</option>
+                <option value="">11. DM</option>
+                <option value="0" disabled>12. osztály</option>
+                <option value="">12. A</option>
+                <option value="">12. HBS</option>
+                <option value="">12. G</option>
+                <option value="0" disabled>13. osztály</option>
+                <option value="">13. A</option>
+                <option value="">13. HBS</option>
+            </select><br><br>
+
             <label for="csapat2">Add meg a második csapat nevét</label><br>
-            <input type="text" id="csapat2"><br><br>
+            <select id="masodikcsapat">
+                <option value="0" selected disabled>--Válassz--</option>
+                <option value="0" disabled>9. osztály</option>
+                <option value="">9. A</option>
+                <option value="">9. HBS</option>
+                <option value="">9. G</option>
+                <option value="">9. MJ</option>
+                <option value="">9. CD</option>
+                <option value="0" disabled>10. osztály</option>
+                <option value="">10. A</option>
+                <option value="">10. HBS</option>
+                <option value="">10. DM</option>
+                <option value="0" disabled>11. osztály</option>
+                <option value="">11. A</option>
+                <option value="">11. HBS</option>
+                <option value="">11. DM</option>
+                <option value="0" disabled>12. osztály</option>
+                <option value="">12. A</option>
+                <option value="">12. HBS</option>
+                <option value="">12. G</option>
+                <option value="0" disabled>13. osztály</option>
+                <option value="">13. A</option>
+                <option value="">13. HBS</option>
+            </select><br><br>
+
             <label for="ido">Add meg hány perces legyen egy félidő</label><br>
             <select id="ido">
                 <option value="0" selected disabled >--Válassz--</option>
@@ -21,22 +69,23 @@
                 <option value="20">20 perc</option>
                 <option value="45">45 perc</option>
             </select><br><br>
+
             <button class="indit" type="button"><h3>Meccs indítása</h3></button>
         </div>
 
         <div class="meccs">
-            <h1>Meccs Adatok</h1>
+            <h1>Meccs adatai</h1>
             <h2>1. félidő</h2>
             <main>
                 <aside>
-                    <h2>1. csapatnév</h2> 
+                    <h2>1. csapat</h2> 
                     <button class="indit" type="button">-</button><button class="indit golsz" type="button">+</button>
                 </aside>
                 <aside>
                     <h1><span class="balg">0</span> - <span class="jobbg">0</span></h1>
                 </aside>
                 <aside>
-                    <h2>2. csapatnév</h2>
+                    <h2>2. csapat</h2>
                     <button class="indit" type="button">+</button><button class="indit golsz" type="button">-</button> 
                 </aside>
             </main>
