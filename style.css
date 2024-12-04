@@ -1,7 +1,7 @@
 body
 {
-    background-image: linear-gradient(rgb(124, 123, 123), rgb(255, 255, 255));
-    background-repeat: no-repeat;
+    text-align: center;
+    font-weight: bold;
 }
 main
 {
@@ -16,14 +16,23 @@ aside
     width: 50%;
     text-align: center;
 }
-.meccs
+.kiallitasok
 {
-    text-align: center;
+    padding: 2%;
+    background-color: rgb(193, 193, 193);
+    border: solid black 2px;
+    border-radius: 5%;
 }
-.adatok, .indit
+.adatok
 {
-    font-weight: bold;
+    background-color: rgb(193, 193, 193);
+    border: solid black 2px;
+    border-radius: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 3%;
 }
+
 .adatok
 {
     text-align: center;
@@ -61,4 +70,10 @@ input:hover
 .golsz
 {
     margin-left: 2%;
+}
+.balg, .jobbg
+{
+    background-color: lightblue;
+    padding: 2%;
+    border: solid black 2px;
 }

@@ -8,47 +8,38 @@
 </head>
 <body>
     <div class="container">
-        <div class="adatok">
-            <label for="csapat1">Add meg az első csapat nevét:</label><br>
-            <input type="text" id="csapat1"><br><br>
-
-            <label for="csapat2">Add meg a második csapat nevét</label><br>
-            <input type="text" id="csapat2"><br><br>
-
-            <label for="ido">Add meg hány perces legyen egy félidő</label><br>
-            <select id="ido">
-                <option value="0" selected disabled >--Válassz--</option>
-                <option value="10">10 perc</option>
-                <option value="30">30 perc</option>
-                <option value="45">45 perc</option>
-            </select><br><br>
-
-            <button class="indit" type="button"><h3>Meccs indítása</h3></button>
-        </div>
-
-        <div class="meccs">
-            <h1>Meccs adatai</h1>
-            <h2>1. félidő</h2>
+        <a href="adatok.html"><button class="indit" type="button"><h3>Új meccs kezdete</h3></button></a>
+        <h1>Meccs adatai</h1><br>
+        <h2>1. félidő</h2><br><br>
+        <div class="meccsadatok">
             <main>
                 <aside>
                     <h2>1. csapat</h2> 
                     <button class="indit" type="button">-</button><button class="indit golsz" type="button">+</button>
                 </aside>
                 <aside>
-                    <h1><span class="balg">0</span> - <span class="jobbg">0</span></h1>
+                    <h1><span class="balg">0</span> - <span class="jobbg">0</span></h1><br><br>
+                    <h1>00:00</h1>
+                    <h2>Hosszabbítás</h2>
+                    <input type="number" min="1" max="20">
+                    <button class="indit">Hosszabbítás indítása</button>
+                    <br><br>
+                    <button class="indit" type="button"><h3>2. félidő indítása</h3>
                 </aside>
                 <aside>
                     <h2>2. csapat</h2>
                     <button class="indit" type="button">+</button><button class="indit golsz" type="button">-</button> 
                 </aside>
+                <aside>
+                    <h1>Kiállítások</h1>
+                    <div class="kiallitasok">
+                        <input type="text" placeholder="Kiállított játékos neve">
+                        <h3 id="kjnev"></h3>
+                    </div>
+                </aside>
             </main>
-            <h1>0:0</h1>
-            <h2>Hosszabbítás</h2>
-            <input type="number" min="1" max="20">
-            <button class="indit">Hosszabbítás indítása</button>
-            <br><br>
-            <button class="indit" type="button"><h3>2. félidő indítása</h3>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
