@@ -10,7 +10,7 @@ body
 }
 h1 span
 {
-    background-color:rgb(158, 180, 180);
+    background-color:rgba(158, 180, 180, 0.7);
     background-attachment: fixed;
     background-size: auto;
     border: solid black 5px;
@@ -19,7 +19,7 @@ h1 span
 }
 h2 span
 {
-    background-color: rgb(104, 137, 137);
+    background-color: rgba(104, 137, 137, 0.7);
     background-attachment: fixed;
     background-size: auto;
     border: solid black 5px;
@@ -47,14 +47,14 @@ aside
 }
 .cs1, .cs2
 {
-    background-color: rgb(127, 164, 166);
+    background-color: rgba(127, 164, 166, 0.7);
     border: solid black 5px;
     border-radius: 5%;
     padding: 3%;
 }
 .jelzo
 {
-    background-color: rgb(75, 130, 172);
+    background-color: rgba(75, 130, 172, 0.7);
     border: solid black 5px;
     border-radius: 5%;
     padding: 3%;
@@ -62,7 +62,7 @@ aside
 }
 .hosszabitas
 {
-    background-color: rgb(78, 77, 90);
+    background-color: rgba(111, 111, 119, 0.7);
     border: solid black 5px;
     border-radius: 5%;
     padding: 3%;
@@ -70,7 +70,7 @@ aside
 .kiallitasok
 {
     padding: 2%;
-    background-color: rgb(33, 30, 37);
+    background-color: rgba(158, 180, 180, 0.7);
     border: solid black 5px;
     border-radius: 5%;
 }
@@ -109,7 +109,7 @@ select:hover
 {
     border-radius: 5%;
     border: solid 5px black;
-    background-color: rgb(141, 220, 146);
+    background-color: rgba(141, 220, 146, 0.7);
 }
 .indit:hover
 {
@@ -126,7 +126,7 @@ select:hover
 }
 #minusz:hover
 {
-    background-color: rgb(207, 45, 45, 0.638);
+    background-color: rgb(207, 45, 45);
 }
 #plusz:hover
 {
@@ -154,6 +154,6 @@ select:hover
 {
     body
     {
-        background-color: rgb(62, 104, 195);
+        background-color: rgba(62, 104, 195, 0.7);
     }
 }
