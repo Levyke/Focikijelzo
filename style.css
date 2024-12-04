@@ -2,8 +2,11 @@ body
 {
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     font-weight: bold;
-    background-color: rgb(62, 104, 195);
+
 }
 h1 span
 {
