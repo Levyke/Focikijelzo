@@ -1,12 +1,32 @@
 body
 {
     text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-    background-image: url(stadium.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: rgb(62, 104, 195);
+}
+h1 span
+{
+    background-color: rgb(177, 200, 47);
     background-attachment: fixed;
-    
+    background-size: auto;
+    border: solid black 5px;
+    border-radius: 5%;
+    padding: 2%;
+}
+h2 span
+{
+    background-color: rgb(11, 235, 228);
+    background-attachment: fixed;
+    background-size: auto;
+    border: solid black 5px;
+    border-radius: 5%;
+    padding: 2%;
+}
+h3
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
 }
 main
 {
@@ -14,70 +34,109 @@ main
 }
 option
 {
-    color: white;
+    color: black;
 }
 aside
 {
-    width: 40%;
+    width: 100%;
     text-align: center;
    
 }
-.csapat1, .csapat2
+.cs1, .cs2
 {
-    background-color: rgb(193, 193, 193);
-    border: solid black 2px;
+    background-color: rgb(46, 199, 210);
+    border: solid black 5px;
+    border-radius: 5%;
+    padding: 3%;
+}
+.jelzo
+{
+    background-color: rgb(51, 37, 197);
+    border: solid black 5px;
+    border-radius: 5%;
+    padding: 3%;
+}
+.hosszabitas
+{
+    background-color: rgb(125, 120, 183);
+    border: solid black 5px;
     border-radius: 5%;
     padding: 3%;
 }
 .kiallitasok
 {
     padding: 2%;
-    background-color: rgb(193, 193, 193);
-    border: solid black 2px;
+    background-color: rgb(62, 12, 144);
+    border: solid black 5px;
     border-radius: 5%;
 }
-.adatok
-{
-    background-color: rgb(193, 193, 193);
-    border: solid black 2px;
-    border-radius: 5%;
-    margin-left: 30%;
-    margin-right: 30%;
-    padding: 3%;
-}
-
 .adatok
 {
     text-align: center;
+    text-decoration: underline;
+    background-color: rgb(75, 130, 172);
+    border: solid black 10px;
+    border-radius: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
     margin-bottom: 5%;
+    padding: 3%;
+    
 }
 input
 {
     border-radius: 5%;
-    border: solid 2px black;
+    border: solid 5px black;
 }
 input:hover
 {
-    background-color: rgb(193, 193, 193);
+    background-color: rgb(194, 235, 235);
+}
+select
+{
+    border-radius: 5%;
+    border: solid 5px black;
+}
+select:hover
+{
+    background-color: rgb(194, 235, 235);
 }
 .indit
 {
     border-radius: 5%;
-    border: solid 2px black;
-    background-color: white;
+    border: solid 5px black;
+    background-color: rgb(141, 220, 146);
 }
 .indit:hover
 {
-    background-color: rgb(193, 193, 193);
+    background-color: rgb(46, 248, 60);
 }
 
+#plusz
+{
+    background-color: green;
+    color: green;
+}
+#minusz
+{
+    background-color: red;
+    color: red;
+}
+#minusz:hover
+{
+    background-color: rgb(207, 45, 45, 0.638);
+}
+#plusz:hover
+{
+    background-color: rgb(55, 179, 55);
+}
 .balg
 {
-    margin-right: 15%;
+    margin-right: 20%;
 }
 .jobbg
 {
-    margin-left: 15%;
+    margin-left: 20%;
 }
 .golsz
 {
@@ -85,7 +144,14 @@ input:hover
 }
 .balg, .jobbg
 {
-    background-color: lightblue;
+    background-color: rgb(255, 255, 255);
     padding: 2%;
-    border: solid black 2px;
+    border: solid black 5px;
+}
+@media screen and (max-width: 480px)
+{
+    body
+    {
+        background-color: rgb(62, 104, 195);
+    }
 }
