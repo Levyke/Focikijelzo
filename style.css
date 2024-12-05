@@ -6,7 +6,10 @@ body
     background-size: cover;
     background-repeat: no-repeat;
     font-weight: bold;
-
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 h1 span
 {
@@ -49,22 +52,19 @@ aside
 {
     background-color: rgba(127, 164, 166, 0.7);
     border: solid black 5px;
-    border-radius: 5%;
     padding: 3%;
 }
 .jelzo
 {
     background-color: rgba(75, 130, 172, 0.7);
     border: solid black 5px;
-    border-radius: 5%;
-    padding: 3%;
-    font-size: 25px;
+    padding: 1%;
+    font-size: 40px;
 }
 .hosszabitas
 {
     background-color: rgba(111, 111, 119, 0.7);
     border: solid black 5px;
-    border-radius: 5%;
     padding: 3%;
 }
 .kiallitasok
@@ -72,7 +72,6 @@ aside
     padding: 2%;
     background-color: rgba(158, 180, 180, 0.7);
     border: solid black 5px;
-    border-radius: 5%;
 }
 .adatok
 {
@@ -83,7 +82,7 @@ aside
     border-radius: 5%;
     margin-left: 30%;
     margin-right: 30%;
-    margin-bottom: 5%;
+    margin-top: 2%;
     padding: 3%;
    
 }
@@ -110,6 +109,7 @@ select:hover
     border-radius: 5%;
     border: solid 5px black;
     background-color: rgba(141, 220, 146, 0.7);
+    font-weight: bold;
 }
 .indit:hover
 {
@@ -119,14 +119,25 @@ select:hover
 #plusz
 {
     background-color: green;
+    font-weight: bold;
 }
 #minusz
 {
     background-color: red;
+    font-weight: bold;
 }
 #minusz:hover
 {
     background-color: rgb(207, 45, 45);
+}
+.kiallit
+{
+    background-color: rgb(255, 199, 43);
+    font-weight: bold;
+}
+.kiallit:hover
+{
+    background-color: rgb(252, 212, 102);
 }
 #plusz:hover
 {
