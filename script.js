@@ -1,9 +1,13 @@
 let adatokdiv = document.getElementById("adatok")
 let jatekadatdiv = document.getElementById("jatekadat")
+
+let cs1Pont = 0;
+let cs2Pont = 0;
+
 function start()
 {
-    let adatokdiv = document.getElementById("adatok")
-    let jatekadatdiv = document.getElementById("jatekadat")
+    let adatokdiv = document.getElementById("adatok");
+    let jatekadatdiv = document.getElementById("jatekadat");
     let csapat1 = document.getElementById("csapat1").value;
     let csapat2 = document.getElementById("csapat2").value;
     let idobeallitas = document.getElementById("idobeallitas").value;
@@ -14,6 +18,8 @@ function start()
         document.getElementById("adatok").style.display = "block";
         document.getElementById("jatekadat").style.display = "none";
     }
+    document.getElementById("elsocsnev").innerHTML = csapat1;
+    document.getElementById("masodikcsnev").innerHTML = csapat2;
 }
 
 function ujmeccs()
@@ -25,8 +31,6 @@ function ujmeccs()
     idobeallitas.value = 0;
 }
 
-let cs1Pont = 0;
-let cs2Pont = 0;
 function pontok() 
 {
     document.getElementById('cs1Pont').textContent = cs1Pont;
