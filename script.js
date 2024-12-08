@@ -3,7 +3,7 @@ let jatekadatdiv = document.getElementById("jatekadat")
 
 let perc = 0;
 let sec = 0;
-let idoaszal;
+let idoszal;
 
 let cs1Pont = 0;
 let cs2Pont = 0;
@@ -42,16 +42,12 @@ function inditas()
 
 function megallit()
 {
-    clearInterval(idoaszal)
+    clearInterval(idoszal)
 }
 
 function torles()
 {
-    perc = 0;
-    sec = 0;
-
-    document.getElementById('perc').innerHTML = '00'
-    document.getElementById('sec').innerHTML = '00'
+    document.getElementById("szamlalo").innerHTML = "00:00"
 }
 function timer() 
 {
