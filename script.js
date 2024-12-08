@@ -31,6 +31,11 @@ function ujmeccs()
     idobeallitas.value = 0;
 }
 
+function masodikfelido()
+{
+    document.getElementById("felido").innerHTML = "2. félidő"
+}
+
 function pontok() 
 {
     document.getElementById('cs1Pont').textContent = cs1Pont;

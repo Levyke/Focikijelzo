@@ -29,7 +29,7 @@
         <div id="jatekadat">
             <button class="indit" type="button" onclick="ujmeccs()"><h3>Új meccs indítása</h3></button><br><br>
             <h1><span>Meccs adatai</span></h1><br><br>
-            <h2><span>1. félidő</span></h2><br><br><br>
+            <h2><span id="felido">1. félidő</span></h2><br><br><br>
             <div class="meccsadatok">
                 <main>
                     <aside>
@@ -54,7 +54,8 @@
                             <input type="number" min="1" max="10">
                             <button class="indit">Hosszabbítás indítása</button>
                             <br><br>
-                            <button class="indit" type="button"><h3>2. félidő indítása</h3>
+                            <button class="indit" onclick="masodikfelido()" type="button"><h3>2. félidő indítása</h3></button>
+                            
                         </div>
                     </aside>
                     <aside>
