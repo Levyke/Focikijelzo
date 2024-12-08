@@ -1,6 +1,10 @@
 let adatokdiv = document.getElementById("adatok")
 let jatekadatdiv = document.getElementById("jatekadat")
 
+let perc = 0;
+let sec = 0;
+let idoaszal;
+
 let cs1Pont = 0;
 let cs2Pont = 0;
 
@@ -31,17 +35,41 @@ function ujmeccs()
     idobeallitas.value = 0;
 }
 
+function inditas()
+{
+    idoszal = setInterval(timer,1000)
+}
+
+function megallit()
+{
+    clearInterval(idoaszal)
+}
+
+function torles()
+{
+    perc = 0;
+    sec = 0;
+
+    document.getElementById('perc').innerHTML = '00'
+    document.getElementById('sec').innerHTML = '00'
+}
+function timer() 
+{
+    if (sec == 60) 
+    {
+        sec = 0;
+        perc++;
+    }
+}
 function masodikfelido()
 {
     document.getElementById("felido").innerHTML = "2. félidő"
 }
-
 function pontok() 
 {
     document.getElementById('cs1Pont').textContent = cs1Pont;
     document.getElementById('cs2Pont').textContent = cs2Pont;
 }
-
 function cs1minusz()
 {
     if(cs1Pont > 0)

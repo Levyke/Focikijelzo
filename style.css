@@ -129,7 +129,17 @@ select:hover
 {
     background-color: rgb(46, 248, 60);
 }
-
+.allj
+{
+    border-radius: 5%;
+    border: solid 5px black;
+    background-color: rgba(236, 80, 80, 0.7);
+    font-weight: bold;
+}
+.allj:hover
+{
+    background-color: rgb(240, 41, 41);
+}
 .plusz
 {
     background-color: green;
