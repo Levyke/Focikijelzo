@@ -1,12 +1,12 @@
-let adatokdiv = document.getElementById("adatok")
-let jatekadatdiv = document.getElementById("jatekadat")
-
 let perc = 0;
 let sec = 0;
 let idoszal;
 
 let cs1Pont = 0;
 let cs2Pont = 0;
+
+let jatekosnevcs1 = document.getElementById("jatekosnevcs1").value
+let jatekosnevcs2 = document.getElementById("jatekosnevcs2").value
 
 function start()
 {
@@ -18,12 +18,48 @@ function start()
     adatokdiv.style.display = "none";
     jatekadatdiv.style.display = "block";
     if (csapat1 == "" || csapat2 == "" || idobeallitas == "0"){
-        alert("Kérlek, tölts ki minden mezőt!"); 
+        alert("Ne hagyd üresen egyik mezőt se!"); 
         document.getElementById("adatok").style.display = "block";
         document.getElementById("jatekadat").style.display = "none";
     }
     document.getElementById("elsocsnev").innerHTML = csapat1;
     document.getElementById("masodikcsnev").innerHTML = csapat2;
+}
+
+let kialliatsidoszalcs1;
+let kiallitasidocs1 = 120;
+function kiallitottjatekoscs1()
+{
+    kialliatsidoszalcs1 = setInterval(kiallitottidoszcs1, 1000)
+}
+function kiallitottidoszcs1()
+{
+    kiallitasidocs1--;
+    const percek = Math.floor(kiallitasidocs1 / 60);
+    const masodpercek = kiallitasidocs1 % 60;
+    document.getElementById("kjnevcs1").innerHTML = percek + ":" + masodpercek
+    if (kiallitasidocs1 == 0)
+    {
+        clearInterval(kialliatsidoszalcs1);
+    }
+}
+
+let kialliatsidoszalcs2;
+let kiallitasidocs2 = 120
+function kiallitottjatekoscs2()
+{
+    kialliatsidoszalcs2 = setInterval(kiallitottidoszcs2, 1000)
+}
+function kiallitottidoszcs2()
+{
+    kiallitasidocs2--;
+    const percek = Math.floor(kiallitasidocs2 / 60);
+    const masodpercek = kiallitasidocs2 % 60;
+    document.getElementById("kjnevcs2").innerHTML = percek + ":" + masodpercek
+    if (kiallitasidocs2 == 0)
+    {
+        clearInterval(kialliatsidoszalcs2);
+    }
 }
 
 function ujmeccs()
