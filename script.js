@@ -87,11 +87,10 @@ function torles()
 }
 function timer() 
 {
-    if (sec == 60) 
-    {
-        sec = 0;
-        perc++;
-    }
+    sec ++
+    perc = Math.floor(sec/60)
+    mp = sec % 60
+    document.getElementById("szamlalo").innerHTML = `${perc} : ${mp} `
 }
 
 function masodikfelido()

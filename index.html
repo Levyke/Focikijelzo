@@ -38,17 +38,23 @@
                             <button id="minuszcs1" onclick="cs1minusz()" class="indit minusz" type="button">-</button><button onclick="cs1plusz()" id="pluszcs1" class="indit golsz plusz" type="button">+</button>
                         </div>
                         <div class="kiallitasok" id="kiallitasok">
-                            <h1><span>Kiállított játékosok</span></h1>
-                            <input id="jatekosnevcs1" type="text" placeholder="Játékos neve">
-                            <button class="indit golsz kiallit" id="jatekosid" onclick="kiallitottjatekoscs1()">Játékos kiállítása</button>
-                            <h3 id="kjnevcs1"></h3>
+                            <form action="">
+                                <h1><span>Kiállított játékosok</span></h1>
+                                <label for="">Név</label>
+                                <input id="jatekosnevcs1" type="text" placeholder="Játékos neve">
+                                <!--
+                                <button class="indit golsz kiallit" id="jatekosid" onclick="kiallitottjatekoscs1()">Játékos kiállítása</button>
+                                <h3 id="kjnevcs1"></h3>
+                                -->
+                                
+                            </form>
                         </div>
                     </aside>
                     <aside>
                         <div class="jelzo">
-                            <button type="button" class="indit" id="inditas" onclick="inditas()"><h3>Félidő indítása</h3></button>
-                            <button type="button" class="allj" id="megallit" onclick="megallit()"><h3>Megszakítás</h3></button>
-                            <button type="button" class="allj" id="torles" onclick="torles()"><h3>Törlés</h3></button>
+                            <button type="button" class="indit" id="indit" onclick="inditas()"><h3>Félidő indítása</h3></button>
+                            <button type="button" class="allj" id="allj" onclick="megallit()"><h3>Megszakítás</h3></button>
+                            <button type="button" class="allj" id="allj" onclick="torles()"><h3>Törlés</h3></button>
                             <h1><span id="szamlalo">00:00</span></h1>
                             <h1><span id="cs1Pont">0</span><span>-</span><span id="cs2Pont">0</span></h1>
                         </div>
