@@ -2,7 +2,10 @@
 {
     display: none;
 }
-
+#befejez
+{
+    display: none;
+}
 body
 {
     text-align: center;
@@ -93,7 +96,6 @@ aside
     text-decoration: underline;
     background-color: rgba(75, 130, 172, 0.7);
     border: solid black 10px;
-    border-radius: 5%;
     margin-left: 30%;
     margin-right: 30%;
     margin-top: 2%;

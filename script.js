@@ -93,10 +93,31 @@ function timer()
         perc++;
     }
 }
+
 function masodikfelido()
 {
     document.getElementById("felido").innerHTML = "2. félidő"
+    document.getElementById("szamlalo").innerHTML = "00:00"
+    document.getElementById("masodikfelidoindit").style.display = "none"
+    document.getElementById("befejez").style.display = "block"
 }
+
+function befejez()
+{
+    if(cs1Pont < cs2Pont)
+    {
+        alert("A meccset a(z) " + document.getElementById("csapat2").value + " csapata nyerte. Gratulálunk")
+    }
+    else if(cs2Pont > cs2Pont)
+    {
+        alert("A meccset a(z) " + document.getElementById("csapat1").value + " csapata nyerte. Gratulálunk")
+    }
+    else
+    {
+        alert("A meccs döntetlen lett")
+    }
+}
+
 function pontok() 
 {
     document.getElementById('cs1Pont').textContent = cs1Pont;
