@@ -32,25 +32,18 @@ function start()
     idoszal = setInterval(indit,1000)
 }
 
-let felidoido = parseInt(idobeallitas*60)
-
 function indit()
 {
+    szamlalo ++
+    let idonezo = parseInt(document.getElementById("idobeallitas").value*60)
     let perc = Math.floor(szamlalo/60)
     let mp = szamlalo % 60
     document.getElementById("felidohossz").innerHTML = `${perc} : ${mp}`;
-    timer()
-}
-
-function timer() 
-{
-    szamlalo ++
     
-    if (szamlalo == felidoido)
+    if (szamlalo == idonezo)
     {
         clearInterval(idoszal)
     }
-    
 }
 
 
