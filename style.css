@@ -120,6 +120,10 @@ select:hover
 {
     background-color: rgb(194, 235, 235);
 }
+ul
+{
+    list-style-image: none;
+}
 .indit
 {
     border-radius: 5%;

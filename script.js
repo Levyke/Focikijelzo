@@ -2,6 +2,11 @@ let perc = 0;
 let sec = 0;
 let idoszal;
 
+let lista = []
+let lista2 = []
+kiallitasidoszalcs1 = setInterval(tick, 1000)
+kialliatsidoszalcs2 = setInterval(tick2, 1000)
+
 let cs1Pont = 0;
 let cs2Pont = 0;
 
@@ -25,43 +30,68 @@ function start()
     document.getElementById("elsocsnev").innerHTML = csapat1;
     document.getElementById("masodikcsnev").innerHTML = csapat2;
 }
+function gomb()
+{
+    let neve = document.getElementById("jatekosnevcs1").value
+    let kiallitasidocs1 = 120;
+    
+    lista.push({task:neve, time:kiallitasidocs1})
 
-let kialliatsidoszalcs1;
-let kiallitasidocs1 = 120;
-function kiallitottjatekoscs1()
-{
-    kialliatsidoszalcs1 = setInterval(kiallitottidoszcs1, 1000)
+    kiiras()
 }
-function kiallitottidoszcs1()
+function gomb2()
 {
-    kiallitasidocs1--;
-    const percek = Math.floor(kiallitasidocs1 / 60);
-    const masodpercek = kiallitasidocs1 % 60;
-    document.getElementById("kjnevcs1").innerHTML = percek + ":" + masodpercek
-    if (kiallitasidocs1 == 0)
+    let neve2 = document.getElementById("jatekosnevcs2").value
+    let kiallitasidocs2 = 120;
+    
+    lista.push({task:neve2, time:kiallitasidocs2})
+
+    kiiras2()
+}
+function kiiras()
+{
+    let main = document.getElementById("felsor")
+    main.innerHTML = ""
+
+    lista.forEach(element =>
     {
-        clearInterval(kialliatsidoszalcs1);
-    }
+        main.innerHTML += `<li> ${element.task}- ${element.time}`
+    })
 }
+function kiiras2()
+{
+    let main2 = document.getElementById("felsor2")
+    main2.innerHTML = ""
 
-let kialliatsidoszalcs2;
-let kiallitasidocs2 = 120
-function kiallitottjatekoscs2()
-{
-    kialliatsidoszalcs2 = setInterval(kiallitottidoszcs2, 1000)
-}
-function kiallitottidoszcs2()
-{
-    kiallitasidocs2--;
-    const percek = Math.floor(kiallitasidocs2 / 60);
-    const masodpercek = kiallitasidocs2 % 60;
-    document.getElementById("kjnevcs2").innerHTML = percek + ":" + masodpercek
-    if (kiallitasidocs2 == 0)
+    lista.forEach(element =>
     {
-        clearInterval(kialliatsidoszalcs2);
-    }
+        main2.innerHTML += `<li> ${element.task}- ${element.time}`
+    })
 }
-
+function tick()
+{
+    for (i = 0; i < lista.length; i++) 
+    {
+        lista[i].time -= 1
+        if (lista[i].time == 0)
+        {
+            lista.splice(i,1)
+        }
+    }
+    kiiras() 
+}
+function tick2()
+{
+    for (i = 0; i < lista2.length; i++) 
+    {
+        lista2[i].time -= 1
+        if (lista2[i].time == 0)
+        {
+            lista2.splice(i,1)
+        }
+    }
+    kiiras2()
+}
 function ujmeccs()
 {
     document.getElementById("adatok").style.display = "block";

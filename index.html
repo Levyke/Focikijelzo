@@ -38,17 +38,20 @@
                             <button id="minuszcs1" onclick="cs1minusz()" class="indit minusz" type="button">-</button><button onclick="cs1plusz()" id="pluszcs1" class="indit golsz plusz" type="button">+</button>
                         </div>
                         <div class="kiallitasok" id="kiallitasok">
-                            <form action="">
-                                <h1><span>Kiállított játékosok</span></h1>
-                                <label for="">Név</label>
-                                <input id="jatekosnevcs1" type="text" placeholder="Játékos neve">
-                                <!--
-                                <button class="indit golsz kiallit" id="jatekosid" onclick="kiallitottjatekoscs1()">Játékos kiállítása</button>
-                                <h3 id="kjnevcs1"></h3>
-                                -->
-                                
-                            </form>
-                        </div>
+                            <main>
+                                <form action="">
+                                    <h1><span>Kiállított játékosok</span></h1>
+                                    <label for="jatekosnevcs1">Név</label>
+                                    <input id="jatekosnevcs1" type="text" placeholder="Játékos neve">
+                                    <button type="button" onclick="gomb()"><h3>Játékos kiállitása</h3></button>
+                                    <section>
+                                        <ul id="felsor">
+
+                                        </ul>
+                                    </section>
+                                </form>
+                            </main>
+                        </div>  
                     </aside>
                     <aside>
                         <div class="jelzo">
@@ -76,10 +79,19 @@
                             <button id="pluszcs2" class="indit plusz" onclick="cs2plusz()" type="button">+</button><button onclick="cs2minusz()" id="minuszcs2" class="indit golsz minusz" type="button">-</button> 
                         </div>
                         <div class="kiallitasok" id="kiallitasok">
-                            <h1><span>Kiállított játékosok</span></h1>
-                            <input id="jatekosnevcs2" type="text" placeholder="Játékos neve">
-                            <button class="indit golsz kiallit" id="jatekosid2"  onclick="kiallitottjatekoscs2()">Játékos kiállítása</button>
-                            <h3 id="kjnevcs2"></h3>
+                            <main>
+                                <form action="">
+                                    <h1><span>Kiállított játékosok</span></h1>
+                                    <label for="jatekosnevcs2">Név</label>
+                                            <input id="jatekosnevcs2" type="text" placeholder="Játékos neve">
+                                            <button type="button" onclick="gomb2()"><h3>Játékos kiállitása</h3></button>
+                                    <section>
+                                        <ul id="felsor2">
+
+                                        </ul>
+                                    </section>
+                                </form>
+                            </main>  
                         </div>
                     </aside>
                 </main>
