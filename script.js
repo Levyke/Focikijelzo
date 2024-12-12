@@ -1,5 +1,4 @@
-let perc = 0;
-let sec = 0;
+let szamlalo = 0;
 let idoszal;
 
 let lista = []
@@ -12,7 +11,7 @@ let cs2Pont = 0;
 
 let jatekosnevcs1 = document.getElementById("jatekosnevcs1").value
 let jatekosnevcs2 = document.getElementById("jatekosnevcs2").value
-
+let idobeallitas = document.getElementById("idobeallitas").value;
 function start()
 {
     let adatokdiv = document.getElementById("adatok");
@@ -29,7 +28,32 @@ function start()
     }
     document.getElementById("elsocsnev").innerHTML = csapat1;
     document.getElementById("masodikcsnev").innerHTML = csapat2;
+
+    idoszal = setInterval(indit,1000)
 }
+
+let felidoido = parseInt(idobeallitas*60)
+
+function indit()
+{
+    let perc = Math.floor(szamlalo/60)
+    let mp = szamlalo % 60
+    document.getElementById("felidohossz").innerHTML = `${perc} : ${mp}`;
+    timer()
+}
+
+function timer() 
+{
+    szamlalo ++
+    
+    if (szamlalo == felidoido)
+    {
+        clearInterval(idoszal)
+    }
+    
+}
+
+
 function gomb()
 {
     let neve = document.getElementById("jatekosnevcs1").value
@@ -101,31 +125,10 @@ function ujmeccs()
     idobeallitas.value = 0;
 }
 
-function inditas()
-{
-    idoszal = setInterval(timer,1000)
-}
-
-function megallit()
-{
-    clearInterval(idoszal)
-}
-
-function torles()
-{
-    document.getElementById("szamlalo").innerHTML = "00:00"
-}
-function timer() 
-{
-    sec ++
-    perc = Math.floor(sec/60)
-    mp = sec % 60
-    document.getElementById("szamlalo").innerHTML = `${perc} : ${mp} `
-}
-
 function masodikfelido()
 {
     document.getElementById("felido").innerHTML = "2. félidő"
+    clearInterval()
     document.getElementById("szamlalo").innerHTML = "00:00"
     document.getElementById("masodikfelidoindit").style.display = "none"
     document.getElementById("befejez").style.display = "block"
