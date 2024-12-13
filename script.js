@@ -9,6 +9,10 @@ kialliatsidoszalcs2 = setInterval(tick2, 1000)
 let cs1Pont = 0;
 let cs2Pont = 0;
 
+let legyenh = document.getElementById("legyenh")
+let hosszindit = document.getElementById("hosszindit")
+let masodikindit = document.getElementById("masodikfelidoindit")
+
 let jatekosnevcs1 = document.getElementById("jatekosnevcs1").value
 let jatekosnevcs2 = document.getElementById("jatekosnevcs2").value
 let idobeallitas = document.getElementById("idobeallitas").value;
@@ -30,10 +34,9 @@ function start()
     document.getElementById("elsocsnev").innerHTML = csapat1;
     document.getElementById("masodikcsnev").innerHTML = csapat2;
     idoszal = setInterval(indit,1000)
-    document.getElementById("hosszindit").style.display = "none"
-    document.getElementById("masodikfelidoindit").style.display = "none"
-    document.getElementById("legyenh").style.display = "none"
-
+    hosszindit.style.display = "none"
+    masodikindit.style.display = "none"
+    legyenh.style.display = "none"
 }
 
 function indit()
@@ -46,7 +49,7 @@ function indit()
     if (szamlalo == idonezo)
     {
         clearInterval(idoszal)
-        document.getElementById("legyenh").style.display = "block"
+        legyenh.style.display = "block"
     }
 }
 
@@ -113,35 +116,29 @@ function tick2()
     kiiras2()
 }
 
+let hszamlalo;
+let idoszalh;
+let hosszpercbe = document.getElementById("hosszabbitasperc").value
+let hosszabbitasid = document.getElementById("hosszabbitas")
 function masodikfelido()
 {
     document.getElementById("felido").innerHTML = "2. félidő"
-    document.getElementById("masodikfelidoindit").style.display = "none"
+    masodikindit.style.display = "none"
     document.getElementById("befejez").style.display = "block"
     clearInterval(idoszal)
     szamlalo = 0;
     idoszal = setInterval(indit,1000)
+    legyenh.style.display = "none"
+    hosszindit.style.display = "none"
+    document.getElementById("felidohossz").innerHTML = "0:0"
 }
 
-function legyen()
-{
-    document.getElementById("legyenh").style.display = "none";
-    document.getElementById("hosszindit").style.display = "block"
-}
-function nelegyen()
-{
-    document.getElementById("legyenh").style.display = "none";
-    document.getElementById("masodikfelidoindit").style.display = "block"
-}
-
-let hszamlalo;
-let idoszalh;
 function starth()
 {
     idoszalh = setInterval(hosszabbitasindit, 1000)
     hszamlalo = document.getElementById("hosszabbitasperc").value*60;
 }
-
+        
 function hosszabbitasindit()
 {
     hszamlalo--
@@ -155,8 +152,8 @@ function hosszabbitasindit()
         document.getElementById("hosszabbitaski").style.backgroundColor = "lightcoral"
         document.getElementById("masodikfelidoindit").style.display = "block"
     }
-    document.getElementById("hosszabbitas").disabled = "true"
 }
+
 
 function befejez()
 {
@@ -164,7 +161,7 @@ function befejez()
     {
         alert("A meccset a(z) " + document.getElementById("csapat2").value + " csapata nyerte. Gratulálunk")
     }
-    else if(cs2Pont > cs2Pont)
+    else if(cs1Pont > cs2Pont)
     {
         alert("A meccset a(z) " + document.getElementById("csapat1").value + " csapata nyerte. Gratulálunk")
     }
@@ -172,6 +169,19 @@ function befejez()
     {
         alert("A meccs döntetlen lett")
     }
+}
+
+function legyen()
+{
+    legyenh.style.display = "none";
+    hosszindit.style.display = "block";
+    hosszpercbe = "0";
+    
+}
+function nelegyen()
+{
+    legyenh.style.display = "none";
+    masodikindit.style.display = "block"
 }
 
 function pontok() 
