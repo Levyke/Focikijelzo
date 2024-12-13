@@ -22,7 +22,6 @@
         </div>
 
         <div id="jatekadat">
-            <button class="indit" type="button" onclick="ujmeccs()"><h3>Új meccs indítása</h3></button><br><br><br>
             <h1><span>Meccs adatai</span></h1><br><br><br>
             <h2><span id="felido">1. félidő</span></h2><br>
             <div class="meccsadatok">
@@ -53,15 +52,24 @@
                             <h1><span id="felidohossz">0:0</span></h1>
                             <h1><span id="cs1Pont">0</span><span>-</span><span id="cs2Pont">0</span></h1>
                         </div>
-                        <div class="hosszabitas">
+                        <div class="hosszabbitas" id="hosszindit">
                             <h1><span>Hosszabbítás</span></h1>
-                            <input type="number" min="1" max="10">
-                            <button class="indit">Hosszabbítás indítása</button>
+                            <input id="hosszabbitasperc" type="number" min="1" max="10"><br><br>
+                            <button id="hosszabbitas" class="indit" onclick="starth()">Hosszabbítás indítása</button>
+                            <br>
+                            <h1><span id="hosszabbitaski">0:0</span></h1>
                         </div>
-                        <div class="hosszabitas" id="masodikfelidoindit">
+                        <div class="hosszabbitas" id="legyenh">
+                            <h1><span>Legyen hosszabbítás?</span></h1>
+                            <button id="legyen" class="indit" onclick="legyen()">Igen legyen</button>
+                            <br><br>
+                            <button id="nelegyen" class="indit" onclick="nelegyen()">Ne legyen</button>
+                            <br>
+                        </div>
+                        <div class="hosszabbitas" id="masodikfelidoindit">
                             <button class="indit" onclick="masodikfelido()" type="button"><h3 id="felidoindit">2. félidő indítása</h3></button>
                         </div>
-                        <div class="hosszabitas" id="befejez">
+                        <div class="hosszabbitas" id="befejez">
                             <button class="indit" onclick="befejez()" type="button"><h3>Meccs befejezése</h3></button>
                         </div>
                     </aside>

@@ -12,6 +12,7 @@ let cs2Pont = 0;
 let jatekosnevcs1 = document.getElementById("jatekosnevcs1").value
 let jatekosnevcs2 = document.getElementById("jatekosnevcs2").value
 let idobeallitas = document.getElementById("idobeallitas").value;
+let idopercben = parseInt(document.getElementById("idobeallitas").value*60)
 function start()
 {
     let adatokdiv = document.getElementById("adatok");
@@ -21,15 +22,18 @@ function start()
     let idobeallitas = document.getElementById("idobeallitas").value;
     adatokdiv.style.display = "none";
     jatekadatdiv.style.display = "block";
-    if (csapat1 == "" || csapat2 == "" || idobeallitas == "0"){
-        alert("Ne hagyd üresen egyik mezőt se!"); 
+    if (csapat1 == "" || csapat2 == "" || idobeallitas <= "0"){
+        alert("Nem töltöttél ki minden mezőt, vagy helytelen értéket adtál meg!"); 
         document.getElementById("adatok").style.display = "block";
         document.getElementById("jatekadat").style.display = "none";
     }
     document.getElementById("elsocsnev").innerHTML = csapat1;
     document.getElementById("masodikcsnev").innerHTML = csapat2;
-
     idoszal = setInterval(indit,1000)
+    document.getElementById("hosszindit").style.display = "none"
+    document.getElementById("masodikfelidoindit").style.display = "none"
+    document.getElementById("legyenh").style.display = "none"
+
 }
 
 function indit()
@@ -39,13 +43,12 @@ function indit()
     let perc = Math.floor(szamlalo/60)
     let mp = szamlalo % 60
     document.getElementById("felidohossz").innerHTML = `${perc} : ${mp}`;
-    
     if (szamlalo == idonezo)
     {
         clearInterval(idoszal)
+        document.getElementById("legyenh").style.display = "block"
     }
 }
-
 
 function gomb()
 {
@@ -109,22 +112,50 @@ function tick2()
     }
     kiiras2()
 }
-function ujmeccs()
-{
-    document.getElementById("adatok").style.display = "block";
-    document.getElementById("jatekadat").style.display = "none";
-    csapat1.value = "";
-    csapat2.value = "";
-    idobeallitas.value = 0;
-}
 
 function masodikfelido()
 {
     document.getElementById("felido").innerHTML = "2. félidő"
-    clearInterval()
-    document.getElementById("szamlalo").innerHTML = "00:00"
     document.getElementById("masodikfelidoindit").style.display = "none"
     document.getElementById("befejez").style.display = "block"
+    clearInterval(idoszal)
+    szamlalo = 0;
+    idoszal = setInterval(indit,1000)
+}
+
+function legyen()
+{
+    document.getElementById("legyenh").style.display = "none";
+    document.getElementById("hosszindit").style.display = "block"
+}
+function nelegyen()
+{
+    document.getElementById("legyenh").style.display = "none";
+    document.getElementById("masodikfelidoindit").style.display = "block"
+}
+
+let hszamlalo;
+let idoszalh;
+function starth()
+{
+    idoszalh = setInterval(hosszabbitasindit, 1000)
+    hszamlalo = document.getElementById("hosszabbitasperc").value*60;
+}
+
+function hosszabbitasindit()
+{
+    hszamlalo--
+    let hperc = Math.floor(hszamlalo/60);
+    let hmp = hszamlalo % 60;
+    document.getElementById("hosszabbitaski").innerHTML = `${hperc} : ${hmp}`
+    if (hszamlalo == 0)
+    {
+        clearInterval(idoszalh)
+        document.getElementById("hosszabbitaski").innerHTML = "Lejárt a hosszabbítás"
+        document.getElementById("hosszabbitaski").style.backgroundColor = "lightcoral"
+        document.getElementById("masodikfelidoindit").style.display = "block"
+    }
+    document.getElementById("hosszabbitas").disabled = "true"
 }
 
 function befejez()
@@ -177,4 +208,3 @@ function cs2plusz()
     cs2Pont++;
     pontok()
 }
-

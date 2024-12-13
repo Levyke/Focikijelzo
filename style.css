@@ -16,8 +16,7 @@ body
     font-weight: bold;
     margin-left: 2%;
     margin-right: 2%;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    padding: 2%;
 }
 h1 span
 {
@@ -78,11 +77,23 @@ aside
     padding: 1%;
     font-size: 40px;
 }
-.hosszabitas
+.hosszabbitas
 {
     background-color: rgba(111, 111, 119, 0.7);
     border: solid black 5px;
     padding: 3%;
+}
+#hosszabbitas
+{
+    background-color: orange;
+}
+#nelegyen
+{
+    background-color: lightcoral;
+}
+#nelegyen:hover
+{
+    background-color: red;
 }
 .kiallitasok
 {
