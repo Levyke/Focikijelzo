@@ -161,16 +161,22 @@ function masodikfelido()
 
 function starth()
 {
-    idoszalh = setInterval(hosszabbitasindit, 1000)
+    
     hszamlalo = document.getElementById("hosszabbitasperc").value*60;
-    if (document.getElementById("hosszabbitasperc").value <= 0)
+    
+    if(document.getElementById("hosszabbitasperc").value <= "0" || document.getElementById("hosszabbitasperc").value == "")
     {
-        hosszabbitasid.disabled = true
-        hosszabbitasid.style.backgroundColor = "lightgray"
+        modal.style.display = "block"
+        modalszoveg.innerText = "Adj meg egy érvényes számot"
     }
     else
     {
-        hosszabbitasid.disabled = false
+        idoszalh = setInterval(hosszabbitasindit, 1000)
+    }
+
+    if(document.getElementById("hosszabbitasperc").value >= "0" || document.getElementById("hosszabbitasperc").value != "")
+    {
+        document.getElementById("hosszabbitas").disabled = false
     }
 }
 
@@ -196,6 +202,7 @@ function legyen()
     hosszindit.style.display = "block";
     document.getElementById("hosszabbitaski").innerHTML = "0:0"
     document.getElementById("hosszabbitaski").style.backgroundColor = "rgba(158, 180, 180, 0.7)"
+    document.getElementById("hosszabbitas").disabled = false
 }
 function nelegyen()
 {
