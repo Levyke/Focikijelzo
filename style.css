@@ -131,7 +131,7 @@ select:hover
 {
     background-color: rgb(194, 235, 235);
 }
-ul
+li
 {
     list-style-image: none;
 }
@@ -202,10 +202,15 @@ ul
     padding: 2%;
     border: solid black 5px;
 }
-@media screen and (max-width: 480px)
+#jk
 {
-    body
-    {
-        background-color: rgba(62, 104, 195, 0.7);
-    }
+    background-color:rgba(158, 180, 180, 0.7);
+    background-attachment: fixed;
+    background-size: auto;
+    border: solid black 5px;
+    border-radius: 5%;
+}
+@media screen and (max-width: 768px)
+{
+    
 }

@@ -67,7 +67,7 @@ function gomb2()
     let neve2 = document.getElementById("jatekosnevcs2").value
     let kiallitasidocs2 = 120;
     
-    lista.push({task:neve2, time:kiallitasidocs2})
+    lista2.push({task:neve2, time:kiallitasidocs2})
 
     kiiras2()
 }
@@ -86,7 +86,7 @@ function kiiras2()
     let main2 = document.getElementById("felsor2")
     main2.innerHTML = ""
 
-    lista.forEach(element =>
+    lista2.forEach(element =>
     {
         main2.innerHTML += `<li> ${element.task}- ${element.time}`
     })
