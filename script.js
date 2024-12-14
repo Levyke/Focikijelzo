@@ -17,6 +17,14 @@ let jatekosnevcs1 = document.getElementById("jatekosnevcs1").value
 let jatekosnevcs2 = document.getElementById("jatekosnevcs2").value
 let idobeallitas = document.getElementById("idobeallitas").value;
 let idopercben = parseInt(document.getElementById("idobeallitas").value*60)
+
+let adatokdiv = document.getElementById("adatok");
+let jatekadatdiv = document.getElementById("jatekadat");
+
+let modal = document.getElementById("adatokmodal")
+let modalszoveg = document.getElementById("modalszoveg")
+modal.style.display = "none"
+
 function start()
 {
     let adatokdiv = document.getElementById("adatok");
@@ -27,16 +35,32 @@ function start()
     adatokdiv.style.display = "none";
     jatekadatdiv.style.display = "block";
     if (csapat1 == "" || csapat2 == "" || idobeallitas <= "0"){
-        alert("Nem töltöttél ki minden mezőt, vagy helytelen értéket adtál meg!"); 
+        modal.style.display = "block"
+        modalszoveg.innerText = "Adj meg érvényes adatokat"
         document.getElementById("adatok").style.display = "block";
         document.getElementById("jatekadat").style.display = "none";
     }
+    else
+    {
+        idoszal = setInterval(indit,1000)
+    }
     document.getElementById("elsocsnev").innerHTML = csapat1;
     document.getElementById("masodikcsnev").innerHTML = csapat2;
-    idoszal = setInterval(indit,1000)
+    i
     hosszindit.style.display = "none"
     masodikindit.style.display = "none"
     legyenh.style.display = "none"
+}
+
+function modalbezar()
+{
+    document.getElementById("adatokmodal").style.display = "none"
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
 }
 
 function indit()
@@ -120,25 +144,36 @@ let hszamlalo;
 let idoszalh;
 let hosszpercbe = document.getElementById("hosszabbitasperc").value
 let hosszabbitasid = document.getElementById("hosszabbitas")
+
 function masodikfelido()
 {
     document.getElementById("felido").innerHTML = "2. félidő"
     masodikindit.style.display = "none"
-    document.getElementById("befejez").style.display = "block"
     clearInterval(idoszal)
     szamlalo = 0;
     idoszal = setInterval(indit,1000)
     legyenh.style.display = "none"
     hosszindit.style.display = "none"
     document.getElementById("felidohossz").innerHTML = "0:0"
+
+    document.getElementById("masodikfelidoindit").innerHTML = `<button class="indit" onclick="befejez()" id="felidobutton" type="button"><h3 id="felidoindit">Meccs befejezése</h3></button>`
 }
 
 function starth()
 {
     idoszalh = setInterval(hosszabbitasindit, 1000)
     hszamlalo = document.getElementById("hosszabbitasperc").value*60;
+    if (document.getElementById("hosszabbitasperc").value <= 0)
+    {
+        hosszabbitasid.disabled = true
+        hosszabbitasid.style.backgroundColor = "lightgray"
+    }
+    else
+    {
+        hosszabbitasid.disabled = false
+    }
 }
-        
+
 function hosszabbitasindit()
 {
     hszamlalo--
@@ -151,23 +186,7 @@ function hosszabbitasindit()
         document.getElementById("hosszabbitaski").innerHTML = "Lejárt a hosszabbítás"
         document.getElementById("hosszabbitaski").style.backgroundColor = "lightcoral"
         document.getElementById("masodikfelidoindit").style.display = "block"
-    }
-}
-
-
-function befejez()
-{
-    if(cs1Pont < cs2Pont)
-    {
-        alert("A meccset a(z) " + document.getElementById("csapat2").value + " csapata nyerte. Gratulálunk")
-    }
-    else if(cs1Pont > cs2Pont)
-    {
-        alert("A meccset a(z) " + document.getElementById("csapat1").value + " csapata nyerte. Gratulálunk")
-    }
-    else
-    {
-        alert("A meccs döntetlen lett")
+        document.getElementById("hosszabbitasperc").value = 0;
     }
 }
 
@@ -175,13 +194,38 @@ function legyen()
 {
     legyenh.style.display = "none";
     hosszindit.style.display = "block";
-    hosszpercbe = "0";
-    
+    document.getElementById("hosszabbitaski").innerHTML = "0:0"
+    document.getElementById("hosszabbitaski").style.backgroundColor = "rgba(158, 180, 180, 0.7)"
 }
 function nelegyen()
 {
     legyenh.style.display = "none";
     masodikindit.style.display = "block"
+}
+
+function befejez()
+{
+    if(cs1Pont < cs2Pont)
+    {
+        modal.style.display = "block"
+        modalszoveg.innerText = "A meccset a(z) " + document.getElementById("csapat2").value + " csapata nyerte. Gratulálunk" + `<button class="indit" onclick="befejez()" id="felidobutton" type="button"><h3 id="felidoindit">Meccs befejezése</h3></button>`
+    }
+    else if(cs1Pont > cs2Pont)
+    {
+        modal.style.display = "block"
+        modalszoveg.innerText = "A meccset a(z) " + document.getElementById("csapat1").value + " csapata nyerte. Gratulálunk" + `<button class="indit" onclick="befejez()" id="felidobutton" type="button"><h3 id="felidoindit">Meccs befejezése</h3></button>`
+    }
+    else
+    {
+        modal.style.display = "block"
+        modalszoveg.innerText = "A meccs döntetlen lett"
+
+    }
+    adatokdiv.style.display = "block"
+    jatekadatdiv.style.display = "none"
+    document.getElementById("csapat1").value = "";
+    document.getElementById("csapat2").value = "";
+    document.getElementById("idobeallitas").value = "";
 }
 
 function pontok() 

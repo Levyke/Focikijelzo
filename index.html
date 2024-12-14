@@ -8,6 +8,13 @@
 </head>
 <body>
     <div class="container">
+        <div id="adatokmodal" class="modal">
+            <div class="modal-content">
+              <span onclick="modalbezar()" class="close">&times;</span>
+              <p id="modalszoveg"></p>
+            </div>
+        </div>
+
         <div class="adatok" id="adatok">
             <h3 for="csapat1">Add meg az első csapat nevét:</h3>
             <input type="text" id="csapat1"><br><br>
@@ -19,6 +26,12 @@
             <input id="idobeallitas" type="number" min="0" max="45"><br><br><br>
 
             <button class="indit" onclick="start()" type="button"><h3>Meccs indítása</h3></button>
+            <div id="adatokmodal" class="modal">
+                <div class="modal-content">
+                  <span onclick="modalbezar()" class="close">&times;</span>
+                  <p>Adj meg érvényes adatokat</p>
+                </div>
+            </div>
         </div>
 
         <div id="jatekadat">
@@ -66,11 +79,9 @@
                             <button id="nelegyen" class="indit" onclick="nelegyen()">Ne legyen</button>
                             <br>
                         </div>
+            
                         <div class="hosszabbitas" id="masodikfelidoindit">
-                            <button class="indit" onclick="masodikfelido()" type="button"><h3 id="felidoindit">2. félidő indítása</h3></button>
-                        </div>
-                        <div class="hosszabbitas" id="befejez">
-                            <button class="indit" onclick="befejez()" type="button"><h3>Meccs befejezése</h3></button>
+                            <button class="indit" onclick="masodikfelido()" id="felidobutton" type="button"><h3 id="felidoindit">2. félidő indítása</h3></button>
                         </div>
                     </aside>
                     <aside>
