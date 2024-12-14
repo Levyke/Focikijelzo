@@ -50,6 +50,8 @@ function start()
     hosszindit.style.display = "none"
     masodikindit.style.display = "none"
     legyenh.style.display = "none"
+
+    document.getElementById("masodikfelidoindit").innerHTML = `<button class="indit" onclick="masodikfelido()" id="felidobutton" type="button"><h3 id="felidoindit">2. félidő indítása</h3></button>`
 }
 
 function modalbezar()
@@ -193,6 +195,12 @@ function hosszabbitasindit()
         document.getElementById("hosszabbitaski").style.backgroundColor = "lightcoral"
         document.getElementById("masodikfelidoindit").style.display = "block"
         document.getElementById("hosszabbitasperc").value = 0;
+
+    }
+    else
+    {
+        document.getElementById("hosszabbitas").disabled = true
+        document.getElementById("hosszabbitas").style.backgroundColor = "lightgray"
     }
 }
 
@@ -233,9 +241,14 @@ function befejez()
     document.getElementById("csapat1").value = "";
     document.getElementById("csapat2").value = "";
     document.getElementById("idobeallitas").value = "";
+    clearInterval(idoszal)
+    document.getElementById("felidohossz").innerHTML = "0:0"
+    szamlalo = 0;
+    document.getElementById('cs1Pont').innerHTML = "0";
+    document.getElementById('cs2Pont').innerHTML = "0"
 }
 
-function pontok() 
+function pontok()
 {
     document.getElementById('cs1Pont').textContent = cs1Pont;
     document.getElementById('cs2Pont').textContent = cs2Pont;
