@@ -208,12 +208,12 @@ function befejez()
     if(cs1Pont < cs2Pont)
     {
         modal.style.display = "block"
-        modalszoveg.innerText = "A meccset a(z) " + document.getElementById("csapat2").value + " csapata nyerte. Gratulálunk" + `<button class="indit" onclick="befejez()" id="felidobutton" type="button"><h3 id="felidoindit">Meccs befejezése</h3></button>`
+        modalszoveg.innerText = "A meccset a(z) " + document.getElementById("csapat2").value + " csapata nyerte. Gratulálunk"
     }
     else if(cs1Pont > cs2Pont)
     {
         modal.style.display = "block"
-        modalszoveg.innerText = "A meccset a(z) " + document.getElementById("csapat1").value + " csapata nyerte. Gratulálunk" + `<button class="indit" onclick="befejez()" id="felidobutton" type="button"><h3 id="felidoindit">Meccs befejezése</h3></button>`
+        modalszoveg.innerText = "A meccset a(z) " + document.getElementById("csapat1").value + " csapata nyerte. Gratulálunk"
     }
     else
     {
