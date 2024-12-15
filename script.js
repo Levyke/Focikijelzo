@@ -211,6 +211,8 @@ function legyen()
     document.getElementById("hosszabbitaski").innerHTML = "0:0"
     document.getElementById("hosszabbitaski").style.backgroundColor = "rgba(158, 180, 180, 0.7)"
     document.getElementById("hosszabbitas").disabled = false
+    document.getElementById("hosszabbitas").style.backgroundColor = "orange"
+
 }
 function nelegyen()
 {
