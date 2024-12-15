@@ -248,6 +248,7 @@ function befejez()
     szamlalo = 0;
     document.getElementById('cs1Pont').innerHTML = "0";
     document.getElementById('cs2Pont').innerHTML = "0"
+    document.getElementById("felido").innerHTML = "1. félidő"
 }
 
 function pontok()
