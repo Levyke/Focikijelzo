@@ -61,8 +61,7 @@ option
 aside
 {
     width: 100%;
-    text-align: center;
-   
+    text-align: center; 
 }
 .cs1, .cs2
 {
@@ -100,6 +99,12 @@ aside
     padding: 2%;
     background-color: rgba(158, 180, 180, 0.7);
     border: solid black 5px;
+    background-attachment: fixed;
+    background-size: auto;
+    text-align: center;
+    display: block;
+    margin: auto;
+   
 }
 .adatok
 {
@@ -210,11 +215,13 @@ li
     border: solid black 5px;
     border-radius: 5%;
 }
-@media screen and (max-width: 768px)
+@media screen and (max-width: 800px) 
 {
-    
+    html
+    {
+        width: 100%;
+    }
 }
-
 .modal 
 {
 display: none; 
